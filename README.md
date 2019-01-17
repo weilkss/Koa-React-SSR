@@ -20,8 +20,7 @@ $ npm install
 
 $ npm run dev //本地开发环境
 $ npm run build //打包prod
-$ npm run server //运行打包dist
-$ npm run start
+$ npm run start //启动项目
 
 ```
 

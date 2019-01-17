@@ -4,8 +4,7 @@
     "author": "xwb007",
     "scripts": {
         "dev": "cross-env NODE_ENV=development nodemon ./server/server.dev.js --watch server",
-        "build": "npm run server && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
-        "server": "rimraf ./dist/client/* && rimraf ./dist/server/* && rimraf ./views/prod/*",
+        "build": "rimraf ./dist/* && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js --progress",
         "start": "npm run build && node ./dist/server/server.js",
         "startpm": "pm2 start ./server/server.dev.js --name xwb007",
         "delpm": "pm2 delete all"
