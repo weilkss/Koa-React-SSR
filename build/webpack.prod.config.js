@@ -20,7 +20,7 @@ function getExternals() {
 clientConfig = {
     context: path.resolve(__dirname, '..'),
     entry: {
-        bundle: './client',
+        bundle: './client'
     },
     output: {
         path: path.resolve(__dirname, '../dist/client'),
@@ -70,8 +70,8 @@ clientConfig = {
         }),
         new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
         new HtmlWebpackPlugin({
-            filename: '../../views/prod/index.html',
-            template: './views/template/index.html',
+            filename: '../../views/index.html',
+            template: './views/template.html',
             chunksSortMode: 'none'
         }),
         new ExtractTextPlugin('[name].[contenthash:8].css', { allChunks: true })

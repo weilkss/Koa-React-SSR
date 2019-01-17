@@ -12,6 +12,13 @@ const getUserInfo = async ctx => {
         data = result[0];
     });
 
+    // data = {
+    //     userId: 1001,
+    //     name: 'xwb007',
+    //     gender: '男',
+    //     age: 24
+    // };
+
     ctx.body = data;
 };
 

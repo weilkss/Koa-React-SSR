@@ -7,7 +7,7 @@ module.exports = {
     devtool: 'eval-source-map',
     context: path.resolve(__dirname, '..'),
     entry: {
-        bundle: ['./client', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'],
+        bundle: ['./client', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
     },
     output: {
         path: path.resolve(__dirname, '../dist/client'),
@@ -53,8 +53,8 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
         new HtmlWebpackPlugin({
-            filename: '../views/dev/index.html',
-            template: './views/template/index.html'
+            filename: '../views/index.html',
+            template: './views/template.html'
         }),
         new ProgressBarPlugin({ summary: true })
     ]

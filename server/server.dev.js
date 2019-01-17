@@ -51,7 +51,7 @@ compiler.plugin('emit', (compilation, callback) => {
     callback();
 });
 
-app.use(views(path.resolve(__dirname, '../views/dev'), { map: { html: 'ejs' } }));
+app.use(views(path.resolve(__dirname, '../views'), { map: { html: 'ejs' } }));
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.use(clientRoute);
