@@ -18,9 +18,10 @@ $ npm install
 
 ```shell
 
-$ npm run dev //本地开发环境
-$ npm run build //打包prod
-$ npm run start //启动项目
+$ npm start //devServer客户端开发环境 http://localhost:8080/
+$ npm run dev //开发环境运行 http://localhost:3000/
+$ npm run build //打包生产环境
+$ npm run server //运行生产环境 http://localhost:3000/
 
 ```
 
@@ -66,5 +67,5 @@ const getUserInfo = async ctx => {
     ctx.body = data;
 };
 
-export default { getUserInfo };
+export default getUserInfo ;
 ```
