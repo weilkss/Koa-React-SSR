@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+
+import { Link, withRouter } from 'react-router-dom';
 import reduxTypes from '../../redux/types';
 import { Button } from '../../components';
-import styles from './index.scss';
+import styles from './index.less';
 
 class About extends Component {
     handleAddClick() {
@@ -19,6 +20,9 @@ class About extends Component {
         const { count } = this.props;
         return (
             <div className={styles.box}>
+                <p>
+                    <Link to="/">Home</Link>
+                </p>
                 <Button className={styles.button} onClick={() => this.handleAddClick()}>
                     增加
                 </Button>
@@ -31,4 +35,4 @@ class About extends Component {
     }
 }
 
-export default connect(state => state)(About);
+export default withRouter(About);

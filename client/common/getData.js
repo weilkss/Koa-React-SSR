@@ -9,7 +9,7 @@ async function getData(path) {
             });
             return data;
         default:
-            break;
+            return { path };
     }
 }
 

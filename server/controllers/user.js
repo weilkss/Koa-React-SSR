@@ -13,7 +13,7 @@ const getUserInfo = async ctx => {
     });
 
     // data = {
-    //     userId: 1001,
+    //     userId: 1002,
     //     name: 'xwb007',
     //     gender: '男',
     //     age: 24
@@ -22,4 +22,4 @@ const getUserInfo = async ctx => {
     ctx.body = data;
 };
 
-export default { getUserInfo };
+export default getUserInfo;
